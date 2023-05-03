@@ -1,0 +1,43 @@
+.header__container-bg img {
+    width: 200%;
+    position: relative;
+    left: -270px;
+    object-position: -252px;
+}
+
+.gallery__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery__container article {
+    border: 1rem solid transparent;
+    transition: var(--transition);
+}
+
+.gallery__container article:hover {
+    border-color: var(--color-gray-500);
+}
+
+
+/* MEDIA QUIRIES (medium screens) */
+
+@media screen and (max-width: 1024px) {
+    .gallery__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery__container article {
+        border: 0;
+    }
+}
+
+
+/* MEDIA QUIRIES (small screens) */
+
+@media screen and (max-width: 600px) {
+    .gallery__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
